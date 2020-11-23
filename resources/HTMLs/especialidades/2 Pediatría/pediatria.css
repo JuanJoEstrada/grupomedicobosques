@@ -1,0 +1,237 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+/* **********************************************************************************************************************************************INFODOCTOR */
+.pediInfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em auto;
+  width: 71em;
+}
+.pediInfo .pediImgs {
+  position: relative;
+  margin: auto 0;
+}
+.imgRelated {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+}
+.imgDoctor {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+}
+.pediImgs img {
+  width: 100%;
+  height: auto;
+  border-radius: 2em;
+  display: block;
+  /* border: 1px solid red; */
+}
+.imgDoctor img {
+  border: 0.7em solid white;
+}
+.pediDoc {
+  width: 45%;
+  /* border: 1px solid red; */
+}
+.pediDoc h2 {
+  font-size: 3em;
+}
+.pediDoc h1 {
+  margin: 0.5em 0;
+  font-size: 1em;
+}
+.pediDoc hr {
+  margin: 2em 0;
+  width: 20%;
+  border: 0;
+  border-top: 2px solid gainsboro;
+}
+.pediDoc p {
+  font-family: "Work Sans";
+  word-spacing: 0.5em;
+  line-height: 1.5em;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: justify;
+}
+.pediDoc h3 {
+  margin: 2em;
+  text-align: center;
+  font-size: 1.35em;
+  color: rgba(0, 0, 0, 0.7);
+}
+/* **********************************************************************************************************************************************SERVICIOS */
+.backColor {
+  margin: 10em 0;
+  background-color: rgba(128, 128, 128, 0.048);
+}
+.servicios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5em;
+  margin: 0 auto;
+  padding: 4em 0;
+  width: 71em;
+  font-weight: 700;
+}
+.servicios h2 {
+  text-align: center;
+  font-weight: 900;
+}
+.servicios hr {
+  margin: 2em auto;
+  border: 0;
+  border-top: 2px solid gainsboro;
+  width: 90px;
+}
+.servicios p {
+  text-align: center;
+}
+.consulta, .vacunas {
+  padding: 2em 0;
+  box-shadow: 0 0 20px 2px gray;
+  line-height: 2em;
+  border-radius: 1.5em;
+  background-color: white;
+}
+/* **********************************************************************************************************************************************ASEGURADORAS */
+.aseguradoras {
+  margin: 10em auto;
+  width: 71em;
+  /* border: 1px solid red; */
+}
+.aseguradoras h2 {
+  color: rgba(0, 0, 0, 0.664);
+  font-size: 2.8em;
+  text-align: center;
+}
+.aseguradoras hr {
+  margin: 2em auto;
+  width: 7em;
+  border: 0;
+  border-top: 2px solid gainsboro;
+}
+.aseguradoras > p {
+  margin-bottom: 3em;
+  text-align: center;
+}
+.aseguradoras figure {
+  margin: 0.3em;
+  height: auto;
+  width: 10em;
+  overflow: hidden;
+}
+.aseguradoras figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1em solid rgba(41, 216, 219, 0.116);
+  border-radius: 100%;
+  display: block;
+}
+.imgAseguradoras {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+/* **********************************************************************************************************************************************ESTATURA */
+.estatura {
+  margin: 10em auto;
+  width: 71em;
+}
+.estatura h2 {
+  color: rgba(0, 0, 0, 0.664);
+  font-size: 2.8em;
+  text-align: center;
+}
+.estatura hr {
+  margin: 2em auto;
+  width: 7em;
+  border: 0;
+  border-top: 2px solid gainsboro;
+}
+.ambos {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+form button {
+  margin: 0.3em;
+  padding: 0.5em 1em;
+  display: block;
+}
+.niña > p, .niño > p {
+  margin-top: 13px;
+  font-size: 1.5em;
+  color: #01578C;
+}
+@media only screen and (max-width: 1220px) {
+  .pediInfo, .servicios, .aseguradoras, .estatura {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .servicios {
+    gap: 2em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .pediInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pediInfo .pediImgs {
+    margin-bottom: 5em;
+  }
+  .pediDoc {
+    width: 100%;
+  }
+  .pediDoc h1, .pediDoc h2, .pediDoc h3 {
+    text-align: center;
+  }
+  .pediDoc hr {
+    margin: 2em auto;
+  }
+  .consulta, .vacunas {
+    grid-column: 1 / span 2;
+  }
+  .backColor {
+    margin: 5em 0;
+  }
+  .aseguradoras, .estatura {
+    margin: 5em auto;
+  }
+  .ambos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .niña, .niño {
+    text-align: center;
+  }
+  #formNiña, #formNiño {
+    margin: 0 auto;
+    display: inline-block;
+  }
+  .niño {
+    margin-top: 3em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  
+}

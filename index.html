@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grupo Médico Bosques</title>
+        <link rel="stylesheet" href="./resources/CSS/headerYfooter.css" type="text/css">
+        <link rel="stylesheet" href="./resources/CSS/index.css" type="text/css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
+        <script src="./resources/JS/especialidadesHandlebars.js" type="text/javascript" defer></script>
+        <script id="handlebarsLogoMedic" type="text/x-handlebars-template">
+            {{#each especialidadesArray}}
+                <a href="{{this.toGo}}" id="logoEspImg" class="{{this.name}}">
+                    <figure>
+                        <img src="{{this.sourceImage}}" alt="{{this.name}}">
+                    </figure>
+                    <figcaption>{{this.name}}</figcaption>
+                    <p>{{this.description}}</p>
+                </a>
+            {{/each}}
+        </script>
+    </head>
+    <body>
+        <header>
+            <a href="./index.html"><img src="./resources/images/Grupo Medico Bosques.png" alt="Grupo Médico Bosques"></a>
+            <label for="boton" class="iconBarra">&#9776</label>
+            <input type="checkbox" id="boton" class="inputHeader">
+            <nav class="navega">
+                <ul>
+                    <li>
+                        <a href="./index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <label for="boton-conoce" class="muestra">Conócenos &#709</label>
+                        <a href="./resources/HTMLs/conocenos/conocenos.html" class="despues">Conócenos</a>
+                        <input type="checkbox" id="boton-conoce" class="inputHeader">
+                        <ul class="subMenu">
+                            <li><a href="./resources/HTMLs/conocenos/conocenos.html#Historia">Historia</a></li>
+                            <li><a href="./resources/HTMLs/conocenos/conocenos.html#Mision">Misión</a></li>
+                            <li><a href="./resources/HTMLs/conocenos/conocenos.html#Vision">Visión</a></li>
+                            <li><a href="./resources/HTMLs/conocenos/conocenos.html#Valores">Valores</a></li>
+                        </ul> 
+                    </li>
+                    <li>
+                        <label for="boton-especialidad" class="muestra">Especialidades &#709</label>
+                        <a href="#Especialidades" class="despues ">Especialidades</a>
+                        <input type="checkbox" id="boton-especialidad" class="inputHeader">
+                        <ul class="subMenu">
+                            <li><a href="./resources/HTMLs/especialidades/1 Ginecología/ginecologia.html">Ginencología</a></li>
+                            <li><a href="./resources/HTMLs/especialidades/2 Pediatría/pediatria.html">Pediatría</a></li>
+                            <li><a href="./resources/HTMLs/especialidades/3 Dermatología/dermatologia.html">Dermatología</a></li>
+                            <li><a href="./resources/HTMLs/especialidades/4 Psicología/psicologia.html">Psicología</a></li>
+                            <li><a href="./resources/HTMLs/especialidades/5 Paidopsiquiatría/paidopsiquiatria.html">Paidopsiquiatría</a></li>
+                            <li><a href="./resources/HTMLs/especialidades/6 Terapia de Lenguaje/terapiadelenguaje.html">Terapia de Lenguaje</a></li>
+                            <li><a href="./resources/HTMLs/especialidades/7 Nutrición/nutricion.html">Nutrición</a></li>
+                            <li><a href="./resources/HTMLs/especialidades/4 Psicología/psicologia.html">Acupuntura</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#Aseguradoras">Aseguradoras</a>
+                    </li>
+                    <li>
+                        <a href="./resources/HTMLs/contacto/contacto.html">Contacato</a>
+                    </li>
+                    <a href="#AgentaTuCita"><button>Agenta tu Cita</button></a>
+                </ul>
+                
+            </nav>
+        </header>
+
+        <main>
+            <article class="portada">
+                <section class="primeraVista">
+                    <h2>Comprometidos con tu bienestar</h2>
+                    <hr>
+                    <h1>Al servicio de tu salud con nuestra experiencia</h1>
+                </section>
+                <section class="imgClinica">
+                    <img src="./resources/images/pediatra.jpeg" alt="Clínica">
+                </section>
+            </article>
+
+            <article class="infoCovid">
+                <section class="imagenes">
+                    <section class="imagenVirus">
+                        <img src="./resources/images/covid.png" alt="virus covid-19">
+                    </section>
+                    <section class="imagenDoctor">
+                        <img src="./resources/images/cubreboca.png" alt="doctor con cubrecoba">
+                    </section>
+                </section>
+                <section class="normasCovid">
+                    <h2>¡Atención!</h2>
+                    <h3>Medidas de seguridad en las instalaciones por <i>COVID-19</i></h3>
+                    <hr>
+                    <ol>
+                        <li><b>Únicamente se permitirá el ingreso al paciente.</b> En caso de ser <b>menor de edad</b>, se le permitirá el acceso con <b>un adulto.</b> (Si vienen acompañados se les pedirá que esperen fuera de las instalaciones por seguridad de todos).</li>
+                        <li>Es obligatorio portar cubrebocas al ingresar.</li>
+                        <li>Mantener la distancia de 1.5m por persona.</li>
+                        <li>Al salir de su cita, por favor lavarse las manos y aplicarse gel antibacterial.</li>
+                        <li><b>El personal de recepción únicamente atenderá a un paciente por especialidad.</b> Es importante que nos apoye y espere sentado mientras es su turno, esto con el fin de evitar aglomeraciones.</li>
+                        <li><b>Si cuenta con fiebre o alguna enfermedad en vías respiratorias favor de notificar al confirmar su cita médica.</b></li>
+                    </ol>
+                    <hr>
+                    <p>Le recordamos que nuestras instalaciones son esterilizadas diariamente para poder brindar una atención segura.</p>
+                </section>
+            </article>
+
+            <article id="AgentaTuCita" class="citaOnline">
+                <section class="descripcion">
+                    <h3>Ahora puedes agendar tu cita ONLINE</h3>
+                    <p>Tener a tu doctora o doctor en casa, ahora es mucho más sencillo.</p>
+                </section>
+                <section class="numeros">
+                    <a href="https://www.google.com/search?q=grupo%20m%C3%A9dico%20bosques&oq=Grupo+M%C3%A9dico+Bosques&aqs=chrome.0.35i39j69i59j35i39j0i22i30l2j69i60l3.5723j0j7&sourceid=chrome&ie=UTF-8&tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=ALeKk02xfhNmOnpbgnr57hDzbkvmRMn1uA:160563254
+                    6912&rflfq=1&num=10&rldimm=11477260673409094269&lqi=ChVncnVwbyBtw6lkaWNvIGJvc3F1ZXNaLgoVZ3J1cG8gbcOpZGljbyBib3NxdWVzIhVncnVwbyBtw6lkaWNvIGJvc3F1ZXM&ved=2ahUKEwiXo-Ssh4rtAhVEmK0KHQxXBzoQvS4wAHoECAwQLw&rlst=f#rlfi=hd:;si:11477260673409094269,l,ChVncnVwbyBtw6lka
+                    WNvIGJvc3F1ZXNaLgoVZ3J1cG8gbcOpZGljbyBib3NxdWVzIhVncnVwbyBtw6lkaWNvIGJvc3F1ZXM;mv:[[19.468046671743014,-99.04411103661396],[19.461876134842083,-99.05608441765644],null,[19.464961432651283,-99.0500977271352],17]" target="_blank"><p>Llámanos al 55 5766-1236 o al 55 5794-4084</p></a>
+                    <a href="https://api.whatsapp.com/send?phone=525532657988&fbclid=IwAR1WmMkWK_L1kHTIF-T5p5d0L1_JK54l1V2feqpxUjyUUV017HR21UNnDRs" target="_blank" class="whatsApp">
+                        <figure>
+                            <img src="./resources/images/whatsapp.png" alt="Logo Whatsapp">
+                        </figure>
+                        <figcaption>+52 1 55 3265 7988</figcaption>
+                    </a>
+                </section>
+            </article>
+
+            <article id="Especialidades" class="especialidades">
+                <h2>Especialidades</h2>
+                <hr>
+                <p>Los mejores médicos puestos a tu disposición para un excelente cuidado de ti y tu familia.</p>
+                <section id="logoEspecialidades">
+                    <!-- Uso de librería Handlebars -->
+                </section>
+            </article>
+
+            <article id="Aseguradoras" class="aseguradoras">
+                <h2>Aseguradoras</h2>
+                <hr>
+                <p>El personal médico cuenta con convenios en las siguientes aseguradoras.</p>
+                <section class="imgAseguradoras">
+                    <figure><img src="./resources/images/aseguradoras/axa.png" alt="Axxa"></figure>
+                    <figure><img src="./resources/images/aseguradoras/banorte.png" alt="Banorte"></figure>
+                    <figure><img src="./resources/images/aseguradoras/mediaccess.jpg" alt="Mediaccess"></figure>
+                    <figure><img src="./resources/images/aseguradoras/metlife.png" alt="Metlife"></figure>
+                    <figure><img src="./resources/images/aseguradoras/vitamedica.png" alt="Vitamedica"></figure>
+                </section>
+            </article>
+        </main>
+        
+        <footer>
+            <section class="info">
+                <figure>
+                    <img src="./resources/images/Grupo Medico Bosques.png" alt="">
+                </figure>
+                <section class="footerInfo">
+                    <section class="llamanos">
+                        <h4>Llámanos</h4>
+                        <br>
+                        <p>55 5766-1236</p>
+                        <p>55 5794-4084</p>
+                    </section>
+                    <section class="numeroWhats">
+                        <h4>Whatsapp</h4>
+                        <br>
+                        <p>+52 1 55 3265-7988</p>
+                    </section>
+                    <section class="localizanos">
+                        <h4>Localízanos</h4>
+                        <br>
+                        <p>Bosques de España 55, Bosques de Aragón, Nezahualcóyotl, Edo. Méx.</p>
+                    </section>
+                    <section class="horarios">
+                        <h4>Horarios</h4>
+                        <br>
+                        <p>Lun-Vier: 09:00 - 19:00</p>
+                        <p>Sáb: 10:00 - 14:00</p>
+                    </section>
+                    <section class="iconFace">
+                        <h4>Síguenos</h4>
+                        <br>
+                        <a href="https://www.facebook.com/grupomedicobosques" target="_blank"><figure><img src="./resources/images/iconFacebook.png" alt=""></figure></a>
+                    </section>
+                    
+                </section>
+            </section>
+            <hr>
+            <section class="copyright">
+                <a href=""><p>Aviso de Privacidad</p></a>
+                <p>Copyright &copy; México 2020 Grupo Médico Bosques</p>
+            </section>
+            
+        </footer>
+        
+    </body>
+</html>

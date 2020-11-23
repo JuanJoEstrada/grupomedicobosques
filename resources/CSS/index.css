@@ -1,0 +1,417 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+/* *********************************************************************************************************************************************************MAIN */
+/* **********************************************************************************************************************************************PORTADA */
+main article.portada {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 40.6em;
+  /* height: 41em; */
+  background: linear-gradient(to right, rgba(1,87,140,0.8) 70%, rgba(41,216,219,0.8) 30%), 
+  url("../images/clínica.jpg");
+  color: white;
+  /* border: 1px solid red; */
+}
+main article section.primeraVista {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 5%;
+  width: 50%;
+  height: 60%;
+  /* border: 1px solid red; */
+}
+hr {
+  width: 15%;
+  border: 0;
+  border-top: 2px solid gainsboro;
+}
+.primeraVista h1 {
+  font-size: 5vw;
+  /* border: 1px solid red; */
+}
+.primeraVista h2 {
+  letter-spacing: 0.05em;
+  font-size: 1.5em;
+}
+/* aquí hay dos formas de ordenar la imagen clínica */
+/* Primera forma */
+/* article section.imgClinica img {
+  margin-right: 5em;
+  height: 28em;
+  border: 1em solid;
+  border-radius: 1em;
+} */
+/* Segunda forma */
+main article section.imgClinica {
+  margin: 5% 5% 5% 0;
+  width: 25%;
+  height: auto;
+  overflow: hidden;
+  /* border: 1px red solid; */
+}
+article.portada img {
+  max-width: 100%;
+  height: auto;
+  border: 1em solid;
+  border-radius: 1em;
+  display: block;
+}
+/* **********************************************************************************************************************************************INFOCOVID */
+article.infoCovid, article.citaOnline {
+  display: flex;
+  justify-content: space-between;
+  margin: 10em auto;
+  width: 71em;
+  /* border: 1px solid red; */
+}
+.infoCovid .imagenes {
+  position: relative;
+  margin: auto 0;
+  /* border: 1px solid red; */
+  /* position: relative; */
+}
+.imagenes .imagenVirus {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 85%;
+  height: auto;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+.imagenVirus img, .imagenDoctor img {
+  width: 100%;
+  height: auto;
+  border-radius: 2em;
+  display: block;
+}
+.imagenDoctor img {
+  border: 0.7em solid white;
+}
+.imagenes .imagenDoctor {
+  position: absolute;
+  top: 14em;
+  left: 18em;
+  width: 40%;
+  height: auto;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+section.normasCovid {
+  width: 45%;
+  /* border: 1px solid red; */
+}
+.normasCovid h2 {
+  color: rgba(0, 0, 0, 0.664);
+  font-size: 3.5em;
+  text-align: center;
+}
+.normasCovid h3 {
+  color: rgba(0, 0, 0, 0.664);
+  padding: 0.7em 0;
+  font-size: 2.3em;
+  line-height: 1.3em;
+}
+.normasCovid ol {
+  color: rgba(0, 0, 0, 0.664);
+  padding: 2em 0 2em 1em;
+  line-height: 1.5em;
+  word-spacing: 0.1em;
+  letter-spacing: 0.01em;
+  /* border: 1px solid red; */
+}
+.normasCovid b {
+  font-weight: 900;
+  color: black;
+}
+.normasCovid p {
+  text-align: center;
+  padding-top: 1.5em;
+  color: #01578C;
+  font-size: 1.3em;
+  font-weight: 900;
+}
+/* **********************************************************************************************************************************************CITAONLINE */
+article.citaOnline {
+  padding: 4em;
+  border-radius: 1.5em;
+  color: white;
+  background-color: #01578C;
+}
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 1.5em;
+}
+.citaOnline h3 {
+  font-size: 2em;
+}
+.numeros a {
+  /* width: 17em; */
+  color: white;
+  text-decoration: none;
+}
+.numeros a:hover {
+  color: #01578C;
+}
+.numeros a p{
+  padding: 1em 2em;
+  border-radius: 1em;
+  text-align: center;
+  background-color: #29D8DB;
+  /* border: 1px red solid; */
+}
+.whatsApp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5em;
+  border-radius: 1em;
+  background-color: #29D8DB;
+}
+.whatsApp figure {
+  width: 3em;
+  height: auto;
+  overflow: hidden;
+}
+.whatsApp figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* ********************************************************************************************************************************BACKGROUNDESPECIALIDADES */
+.especialidades {
+  margin: 10em auto;
+  width: 71em;
+  /* border: 1px solid red; */
+}
+.especialidades h2 {
+  color: rgba(0, 0, 0, 0.664);
+  font-size: 2.8em;
+  text-align: center;
+}
+.especialidades hr {
+  margin: 2em auto;
+  width: 7em;
+  border-top: 2px solid gainsboro;
+}
+.especialidades > p {
+  margin-bottom: 3em;
+  text-align: center;
+}
+#logoEspecialidades {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2.5em;
+  background-color: white;
+}
+a.Ginecología {
+  grid-column: 1 / span 2;
+}
+a.Pediatría {
+  grid-column: 3 / span 2;
+}
+a.Dermatología {
+  grid-column: 5 / span 2;
+}
+a.Psicología {
+  grid-column: 1 / span 2;
+}
+a.Paidopsiquiatría {
+  grid-column: 3 / span 2;
+}
+a.Terapia {
+  grid-column: 5 / span 2;
+}
+a.Nutrición {
+  grid-column: 1 / span 3;
+}
+a.Acupunura {
+  grid-column: 4 / span 3;
+}
+#logoEspecialidades figure {
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+  width: 3em;
+  height: auto;
+  overflow: hidden;
+}
+#logoEspecialidades figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+#logoEspecialidades figcaption {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.664);
+  margin-bottom: 1em;
+}
+#logoEspImg {
+  padding: 1em;
+  box-shadow: 0 0 15PX #01578C;
+  border-radius: 1em;
+  /* background-color: rgba(245, 245, 245, 0.616); */
+  text-decoration: none;
+  text-align: center;
+}
+#logoEspImg:hover {
+  box-shadow: inset 0 0 20PX #01578C;
+}
+#logoEspImg > p {
+  color: #01578C;
+}
+/* **********************************************************************************************************************************************ASEGURADORAS */
+.aseguradoras {
+  margin: 10em auto;
+  width: 71em;
+  /* border: 1px solid red; */
+}
+.aseguradoras h2 {
+  color: rgba(0, 0, 0, 0.664);
+  font-size: 2.8em;
+  text-align: center;
+}
+.aseguradoras hr {
+  margin: 2em auto;
+  width: 7em;
+  border-top: 2px solid gainsboro;
+}
+.aseguradoras > p {
+  margin-bottom: 3em;
+  text-align: center;
+}
+.aseguradoras figure {
+  margin: 0.3em;
+  height: auto;
+  width: 10em;
+  overflow: hidden;
+}
+.aseguradoras figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1em solid rgba(41, 216, 219, 0.116);
+  border-radius: 100%;
+  display: block;
+}
+.imgAseguradoras {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+@media only screen and (max-width: 1220px) {
+  /* **********************************************************************INFOCOVID */
+  article.infoCovid, article.citaOnline, .especialidades, .aseguradoras {
+    width: 90%;
+  }
+}
+/* *******************************************************************************************************************************************************QUERYTABLET */
+@media only screen and (max-width: 1024px) {
+  /* *****************************************************************************************************************************************PORTADA */
+  main article.portada {
+    flex-direction: column;
+    align-items: center;
+    padding: 5em 0;
+    height: auto;
+  }
+  main article section.primeraVista {
+    align-items: center;
+    /* justify-content: space-around; */
+    text-align: center;
+    margin: 0;
+    width: 80%;
+  }
+  .primeraVista h2 {
+    padding-bottom: 2em;
+  }
+  .primeraVista h1 {
+    padding: 1em 0;
+  }
+  main article section.imgClinica {
+    margin: 5% 0 0 0;
+    width: 45%;
+  }
+  article.portada img {
+    border-width: 0.7em;
+  }
+  /* ***************************************************************************************************************************************INFOCOVID */
+  article.infoCovid {
+    flex-direction: column;
+    align-items: center;
+  }
+  section.normasCovid {
+    padding-top: 7em;
+    width: 90%;
+  }
+  /* **********************************************************************************************************************************ESPECIALIDADES */
+  #logoEspecialidades {
+    gap: 1em;
+  }
+  #logoEspImg {
+    box-shadow: 0 0 10PX #01578C;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .primeraVista h2 {
+    font-size: 3vw;
+  }
+  article.citaOnline {
+    flex-direction: column;
+    text-align: center;
+  }
+  .descripcion {
+    margin-bottom: 2em;
+  }
+  .descripcion h3 {
+    margin-bottom: 0.5em;
+  }
+  a.Ginecología, a.Dermatología, a.Paidopsiquiatría, a.Nutrición {
+    grid-column: 1 / span 3;
+  }
+  a.Pediatría, a.Psicología, a.Terapia, a.Acupunura {
+    grid-column: 4 / span 3;
+  }
+}
+/* *******************************************************************************************************************************************************QUERYPHONE */
+@media only screen and (max-width: 480px) {
+  /* ***************************************************************************************************************************************INFOCOVID */
+  article.infoCovid, article.citaOnline, .especialidades, .aseguradoras {
+    margin: 7em auto;
+  }
+  .imagenes .imagenDoctor {
+    top: 50%;
+    left: 60%;
+  }
+  .normasCovid h2 {
+    font-size: 12vw;
+  }
+  .normasCovid h3 {
+    font-size: 7vw;
+  }
+  /* **************************************************************************************************************************************CITAONLINE */
+  article.citaOnline {
+    padding: 1em;
+  }
+  /* **********************************************************************************************************************************ESPECIALIDADES */
+  .especialidades > h2 {
+    font-size: 9vw;
+  }
+  #logoEspecialidades {
+    display: flex;
+    flex-direction: column;
+  }
+}

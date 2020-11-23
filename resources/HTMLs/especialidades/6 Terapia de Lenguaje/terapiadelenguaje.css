@@ -1,0 +1,156 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+/* **********************************************************************************************************************************************INFODOCTOR */
+.teraInfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em auto;
+  width: 71em;
+}
+.teraInfo .teraImgs {
+  position: relative;
+  margin: auto 0;
+}
+.imgRelated {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+}
+.imgDoctor {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+}
+.teraImgs img {
+  width: 100%;
+  height: auto;
+  border-radius: 2em;
+  display: block;
+  /* border: 1px solid red; */
+}
+.imgDoctor img {
+  border: 0.7em solid white;
+}
+.teraDoc {
+  width: 45%;
+  /* border: 1px solid red; */
+}
+.teraDoc h2 {
+  font-size: 3em;
+}
+.teraDoc h1 {
+  margin: 0.5em 0;
+  font-size: 1em;
+}
+.teraDoc hr {
+  margin: 2em 0;
+  width: 20%;
+  border: 0;
+  border-top: 2px solid gainsboro;
+}
+.teraDoc p {
+  font-family: "Work Sans";
+  word-spacing: 0.5em;
+  line-height: 1.5em;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: justify;
+}
+.teraDoc h3 {
+  margin: 2em;
+  text-align: center;
+  font-size: 1.35em;
+  color: rgba(0, 0, 0, 0.7);
+}
+/* **********************************************************************************************************************************************SERVICIOS */
+.backColor {
+  margin: 10em 0;
+  background-color: rgba(128, 128, 128, 0.048);
+}
+.servicios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5em;
+  margin: 0 auto;
+  padding: 4em 0;
+  width: 71em;
+  font-weight: 700;
+}
+.servicios h2 {
+  margin-top: 1em;
+  text-align: center;
+  font-weight: 900;
+}
+.servicios hr {
+  margin: 2em auto;
+  border: 0;
+  border-top: 2px solid gainsboro;
+  width: 90px;
+}
+.servicios .unorderList {
+  display: table;
+  margin: 1em auto;
+  width: 85%;
+}
+.servicios li {
+  margin: 1em 0;
+}
+.talleres, .areas {
+  grid-column: 1 / span 2;
+}
+.talleres, .asesoramiento, .consulta {
+  box-shadow: 0 0 20px 2px gray;
+  line-height: 1.5em;
+  border-radius: 1.5em;
+  background-color: white;
+}
+@media only screen and (max-width: 1220px) {
+  .teraInfo, .servicios {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .servicios {
+    gap: 2em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .teraInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .teraInfo .teraImgs {
+    margin-bottom: 5em;
+  }
+  .teraDoc {
+    width: 100%;
+  }
+  .teraDoc h1, .teraDoc h2, .teraDoc h3 {
+    text-align: center;
+  }
+  .teraDoc hr {
+    margin: 2em auto;
+  }
+  .asesoramiento, .consulta {
+    grid-column: 1 / span 2;
+  }
+  .backColor {
+    margin: 5em 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  
+}

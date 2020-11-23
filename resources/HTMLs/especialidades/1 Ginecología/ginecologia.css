@@ -1,0 +1,259 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+/* **********************************************************************************************************************************************INFODOCTOR */
+.gineInfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em auto;
+  width: 71em;
+}
+.gineInfo .gineImgs {
+  position: relative;
+  margin: auto 0;
+}
+.imgRelated {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+}
+.imgDoctor {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+}
+.gineImgs img {
+  width: 100%;
+  height: auto;
+  border-radius: 2em;
+  display: block;
+  /* border: 1px solid red; */
+}
+.imgDoctor img {
+  border: 0.7em solid white;
+}
+.gineDoc {
+  width: 45%;
+  /* border: 1px solid red; */
+}
+.gineDoc h2 {
+  font-size: 3em;
+}
+.gineDoc h1 {
+  margin: 0.5em 0;
+  font-size: 1em;
+}
+.gineDoc hr {
+  margin: 2em 0;
+  width: 20%;
+  border: 0;
+  border-top: 2px solid gainsboro;
+}
+.gineDoc p {
+  font-family: "Work Sans";
+  word-spacing: 0.5em;
+  line-height: 1.5em;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: justify;
+}
+.gineDoc h3 {
+  margin: 2em;
+  text-align: center;
+  font-size: 1.35em;
+  color: rgba(0, 0, 0, 0.7);
+}
+/* **********************************************************************************************************************************************SERVICIOS */
+.backColor {
+  margin: 10em 0;
+  background-color: rgba(128, 128, 128, 0.048);
+}
+.servicios {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 4em 0;
+  width: 71em;
+  font-weight: 700;
+}
+.servicios h2 {
+  margin-top: 1em;
+  text-align: center;
+  font-weight: 900;
+}
+.servicios hr {
+  margin: 2em auto;
+  border: 0;
+  border-top: 2px solid gainsboro;
+  width: 90px;
+}
+.consulta, .servicios figure {
+  margin: 0 1em;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0 0 20px 2px gray;
+  border-radius: 1.5em;
+  background-color: white;
+}
+.consulta p {
+  margin: 2em 0;
+}
+.otroColor {
+  margin: 1em 0;
+  text-align: center;
+  color:  gray;
+}
+.servicios figure {
+  margin: auto 0;
+  height: auto;
+  width: 20em;
+  overflow: hidden;
+}
+.servicios figure img {
+  height: auto;
+  width: 100%;
+  display: block;
+}
+/* **********************************************************************************************************************************************ASEGURADORAS */
+.aseguradoras {
+  margin: 10em auto;
+  width: 71em;
+  /* border: 1px solid red; */
+}
+.aseguradoras h2 {
+  color: rgba(0, 0, 0, 0.664);
+  font-size: 2.8em;
+  text-align: center;
+}
+.aseguradoras hr {
+  margin: 2em auto;
+  width: 7em;
+  border: 0;
+  border-top: 2px solid gainsboro;
+}
+.aseguradoras > p {
+  margin-bottom: 3em;
+  text-align: center;
+}
+.aseguradoras figure {
+  margin: 0.3em;
+  height: auto;
+  width: 10em;
+  overflow: hidden;
+}
+.aseguradoras figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1em solid rgba(41, 216, 219, 0.116);
+  border-radius: 100%;
+  display: block;
+}
+.imgAseguradoras {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.yui3-button {
+  margin:10px 0px 10px 0px;
+  color: #fff;
+  background-color: #3476b7;
+}
+/* **********************************************************************************************************************************************FECHAPP */
+.fechaPP {
+  margin: 10em auto;
+  width: 71em;
+}
+.fechaPP h2 {
+  color: rgba(0, 0, 0, 0.664);
+  font-size: 2.8em;
+  text-align: center;
+}
+.fechaPP p {
+  text-align: center;
+}
+.fechaPP hr {
+  margin: 2em auto;
+  width: 7em;
+  border: 0;
+  border-top: 2px solid gainsboro;
+}
+#demo {
+  display: flex;
+  flex-direction: column;
+  width: 287px; /*observar línea 9 de ginecologia.js*/
+  margin: 0 auto;
+}
+#mycalendar {
+  margin: 2em 0;
+}
+#selecteddate {
+  margin: 1em 0;
+}
+#fpp {
+  margin: 1em 0;
+  color:#01578C;
+  font-weight: 750;
+}
+@media only screen and (max-width: 1220px) {
+  .gineInfo, .servicios, .aseguradoras, .fechaPP {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  
+}
+@media only screen and (max-width: 768px) {
+  /* *******************************************************************************************************************************INFODOCTOR */
+  .gineInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gineInfo .gineImgs {
+    margin-bottom: 5em;
+  }
+  .gineDoc {
+    width: 100%;
+  }
+  .gineDoc h1, .gineDoc h2, .gineDoc h3 {
+    text-align: center;
+  }
+  .gineDoc hr {
+    margin: 2em auto;
+  }
+  .backColor, .aseguradoras, .fechaPP {
+    margin: 5em auto;
+  }
+  /* ***********************************************************************************************************************************SERVICIOS */
+  .consulta {
+    margin: 0;
+    margin-bottom: 2em;
+  }
+  .servicios {
+    flex-direction: column;
+    align-items: center;
+  }
+  .servicios figure {
+    width: 100%;
+  }
+  /* *******************************************************************************************************************************ASEGURADORAS*/
+  .aseguradoras {
+    margin: 5em auto;
+  }
+}
+@media only screen and (max-width: 480px) {
+  
+}

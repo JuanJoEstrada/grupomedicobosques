@@ -1,0 +1,260 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+/* *******************************************************************************************************************************************************HEADER */
+header a img {
+  margin: 1% 0 1% 6%;
+  float: left;
+  width: 12em;
+  /* border: 1px red solid; */
+}
+header nav:after {
+  content: "";
+  clear: both; /*elemento es movido hacia abajo para limpiar tanto elementos flotntes de la izquierda como la derecha*/
+  display: table;
+}
+header nav ul {
+  float: right;
+  list-style: none;
+  /* padding-top: 1.6em; */
+  /* margin-top: 1em; */
+  position: relative;
+  /* border: 1px red solid; */
+}
+header nav ul li {
+  float: left;
+  /* display: inline-block; */
+  margin: 1.7em 1em;
+  background-color: white;
+  /* border: 1px red solid; */
+}
+header nav ul li a {
+  color: rgba(0, 0, 0, 0.664);
+  text-decoration: none;
+  line-height: 3em;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+}
+header nav ul li a.despues::after {
+  content: "\02C5";
+  margin-left: 0.4em;
+}
+header nav ul li a:hover {
+  color: #29D8DB;
+  transition: color 50ms ease-in-out;
+}
+header nav ul li ul.subMenu {
+  position: absolute;
+  top: 80px;
+  visibility: hidden; 
+  transition: top 300ms; /*primero aparece en 90 y luego en 80px*/
+}
+header nav ul li:hover ul.subMenu {
+  top: 70px;
+  visibility: visible;
+  border-top: 1px solid #29D8DB;
+}
+header nav ul li ul.subMenu li {
+  position: relative;
+  margin: 0;
+  padding-left: 1em; 
+  width: 12em;
+  float: none;
+  display: list-item;
+}
+button {
+  float: left;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  margin: 1.4em 5em 0 1em;
+  padding: 0.7em 1.5em;
+  border-radius: 0.5em;
+  color: white;
+  background-color: #29D8DB;
+  border: 1px none;
+  outline:none
+}
+.navega button:hover {
+  cursor: pointer;
+  background-color: #01578C;
+}
+.muestra, .iconBarra, input.inputHeader {
+  display: none;
+}
+/* *********************************************************************************************************************************************************FOOTER */
+footer {
+  padding: 0 1em;
+  background-image: linear-gradient(180deg,  #29D8DB,  #01578C);
+}
+footer .info {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 2em 0;
+  /* border-bottom: 1px solid black; */
+}
+footer .info > figure {
+  margin: auto 1em;
+  height: auto;
+  width: 15em;
+  overflow: hidden;
+}
+footer .info figure img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+.footerInfo {
+  display: inline-flex;
+  justify-content: space-between;
+}
+footer hr {
+  margin: 0 auto;
+  width: 90%;
+  border: 0;
+  border-top: 2px solid  gainsboro;
+}
+.localizanos {
+  flex-basis: 20em;
+}
+.iconFace a figure {
+  padding: 1em 0;
+  width: 3em;
+  height: auto;
+  overflow: hidden;
+  background-color: #29D8DB;
+  border-radius: 0.5em;
+}
+.iconFace a figure img {
+  max-width: 20%;
+  margin: 1% auto;
+  height: auto;
+  display: block;
+}
+.copyright {
+  padding: 2em 0;
+}
+.copyright p {
+  padding: 0.5em 0;
+  text-align: center;
+  color: white;
+}
+.copyright a {
+  text-decoration: none;
+}
+@media only screen and (max-width: 1220px) {
+  /* *************************************************************************HEADER */
+  header nav {
+    margin-right: 2em;
+  }
+  .navega button {
+    display: none;
+  }
+}
+/* *******************************************************************************************************************************************************QUERYTABLET */
+@media only screen and (max-width: 1024px) {
+  /* ******************************************************************************************************************************************HEADER */
+  header nav ul li a {
+    margin: 0;
+    margin-left: 2%;
+    /* border: 1px red solid; */
+  }
+  header nav ul {
+    width: 100%;
+    float: left;
+    /* border: 1px red solid; */
+  }
+  header nav ul li, header nav ul li ul.subMenu li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* border: 1px red solid; */
+  }
+  header nav ul li ul.subMenu {
+    top: 70px;
+    position: static;
+    border-top: none;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    /* border: 1px red solid; */
+  }
+  header nav ul li ul.subMenu li a {
+    margin-left: 7%;
+  }
+  .muestra {
+    display: block;
+    color: rgba(0, 0, 0, 0.664);
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    margin-left: 2%;
+    line-height: 3em;
+    cursor: pointer;
+    /* border: 1px red solid; */
+  }
+  .muestra:hover {
+    color: #29D8DB;
+    transition: color 50ms ease-in-out;
+  }
+  .iconBarra {
+    display: block;
+    position: absolute;
+    right: 40px;
+    margin-top: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    /* border: 1px red solid; */
+  }
+  .muestra + a, nav > ul {
+    display: none;
+  }
+  #boton:checked + nav > ul, 
+  #boton-conoce:checked + ul.subMenu, 
+  #boton-especialidad:checked + ul.subMenu {
+    display: block;
+  }
+  /* .navega > a > button {
+    display: none;
+  } */
+  /* *******************************************************************************************************************************************FOOTER */
+  footer figure {
+    width: 20em;
+  }
+  .footerInfo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  .footerInfo > section {
+    margin: 1em 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer .info {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2em;
+  }
+  .footerInfo {
+    display: block;
+    text-align: center;
+  }
+  .footerInfo > section {
+    margin: 1.5em 0;
+  }
+  .iconFace a figure {
+    margin: 0 auto;
+  }
+}
+/* *******************************************************************************************************************************************************QUERYPHONE */
+@media only screen and (max-width: 480px) {
+  /* ***************************************************************************************************************************************INFOCOVID */
+}

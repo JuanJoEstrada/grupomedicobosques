@@ -1,0 +1,54 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+/* *************************************************************************************************************MAIN */
+#Historia, #Mision, #Vision, #Valores {
+  margin: 5em auto;
+  width: 71em;
+  letter-spacing: 0.05em;
+  word-spacing: 0.2em;
+  line-height: 1.2em;
+}
+#Historia, #Vision {
+  padding: 4em 1em;
+  border-radius: 2em;
+  color: white;
+  background-color:#01578C;
+}
+main article h1 {
+  text-align: center;
+}
+main article hr {
+  margin: 2em auto;
+  width: 7em;
+  border: 0;
+  border-top: 2px solid gainsboro;
+}
+.orderList {
+  display: table;
+  margin: 1em auto;
+  text-align: center;
+}
+@media only screen and (max-width: 1220px){
+  #Historia, #Mision, #Vision, #Valores{
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+
+}
+@media only screen and (max-width: 768px){
+  .orderList {
+    padding: 0 5em;
+  }
+}
+@media only screen and (max-width: 480px){
+
+}

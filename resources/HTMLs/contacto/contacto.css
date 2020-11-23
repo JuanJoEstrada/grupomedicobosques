@@ -1,0 +1,36 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.ubicacion, .parteDeGMB {
+  margin: 5em auto;
+  text-align: center;
+  width: 90%;
+}
+.ubicacion h2, .parteDeGMB h1 {
+  font-size: 3em;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.664);
+}
+.parteDeGMB p {
+  text-align: center;
+  font-size: 1.5em;
+}
+hr {
+  margin: 2em auto;
+  width: 7em;
+  border: 0;
+  border-top: 2px solid gainsboro;
+}
+#map {
+  margin: 0 auto;
+  height: 400px;
+  width: 95%;
+  box-shadow: 0 0 15PX #01578C;
+}
